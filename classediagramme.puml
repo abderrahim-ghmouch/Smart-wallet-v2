@@ -1,0 +1,76 @@
+@startuml Smart_wallet
+hide circle
+skinparam classAttributeIconSize 0
+
+class Users {
+    +String name
+    -int age
+}
+
+class Cards {
+    +String userCard
+    +String bank
+    #int cardNumber
+    +int cvc
+}
+
+class Incomes {
+    #int amount
+    +Date incomeDate
+}
+
+class Expenses {
+    #int amount
+    +Date expenseDate
+}
+
+class Database {
+    -String host
+    -String dbName
+    -String username
+    -String password
+    +connect()
+}
+
+Users -- Cards
+Cards -- Incomes
+Cards -- Expenses
+
+@enduml
+skinparam classAttributeIconSize 0
+
+class Users {
+    +String name
+    -int age
+}
+
+class Cards {
+    +String userCard
+    +String bank
+    #int cardNumber
+    +int cvc
+}
+
+class Incomes {
+    #int amount
+    +Date incomeDate
+}
+
+class Expenses {
+    #int amount
+    +Date expenseDate
+}
+
+class Database {
+    -String host
+    -String dbName
+    -String username
+    -String password
+    +connect()
+}
+
+Users -- Cards
+Cards -- Incomes
+Cards -- Expenses
+
+@enduml
