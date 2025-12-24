@@ -30,7 +30,7 @@ class Database {
     -String dbName
     -String username
     -String password
-    +connect()
+    +getconnection()
 }
 
 Users -- Cards
