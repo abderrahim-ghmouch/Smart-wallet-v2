@@ -5,6 +5,7 @@ skinparam classAttributeIconSize 0
 
 abstract class Users {
     +String name
+    
     -int age
 }
 
