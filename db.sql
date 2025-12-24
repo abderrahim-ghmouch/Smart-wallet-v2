@@ -8,22 +8,25 @@ CREATE TABLE  users
     email varchar(50) UNIQUE,
     password varchar(255)
     
-);
+)
 
 CREATE TABLE categories
 (
     id int primary key AUTO INCREMENT,
-    namecategory varchar(50) not NULL
+    namecategory varchar(50) not NULL,
 
-);
+)
 
 CREATE TABLE incomes(
-    id int PRIMARY KEY AUTO INCREMENT,
+
+    id int PRIMARY KEY  AUTO INCREMENT,
     amount DECIMAL(10,2) NOT NULL,
     income_description TEXT not null,
     category_income int,
     FOREIGN KEY(category_income)REFERENCES categories(id)
-);
+
+
+)
 
 CREATE TABLE expences(
 
