@@ -1,12 +1,12 @@
-@startuml smartuml
+@startuml Smart_wallet
+
 
 skinparam classAttributeIconSize 0
 
-class Users {
+abstract class Users {
     +String name
     -int age
 }
-
 
 class Cards {
     +String userCard
@@ -14,6 +14,7 @@ class Cards {
     #int cardNumber
     +int cvc
 }
+
 class Incomes {
     #int amount
     +Date incomeDate
