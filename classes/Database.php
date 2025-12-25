@@ -1,18 +1,17 @@
 <?php
-class database{
+class Database{
     private $pdo;
 
-    public function __construct(
-        $host,$dbname,$username,$password
-    )
+    public function __construct()
     {
+        $config=require __DIR__ . "/../database.php";
         try{
-            
-            $this->pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+            $dsn ="mysql:host={$config['host']};dbname={$config['dbname']};charset=utf8";
+            $this->pdo = new PDO($dsn, $config['username'], $config['password']);
         }
         catch(PDOException $e)
         {
-            echo "your connection is failed".$e->getmessage();
+            echo $e->getmessage();
         }
     }
 
@@ -20,4 +19,6 @@ class database{
         return $this->pdo;
     }
 }    
+
+$obj = new Database();
 
