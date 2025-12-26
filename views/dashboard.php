@@ -27,7 +27,7 @@ if(!isset($_SESSION["user_id"]))
         <header class="mb-8">
             <div class="flex justify-between items-center">
                 <div>
-                    <h1 class="text-3xl font-bold text-white">Finance Dashboard</h1>
+                    <h1 class="text-3xl font-bold text-white">Smartwallet</h1>
                     <p class="text-gray-400">Track your income and expenses</p>
                 </div>
                 <div class="flex space-x-4">
@@ -39,10 +39,11 @@ if(!isset($_SESSION["user_id"]))
                         <i class="fas fa-minus"></i>
                         <span>Add Expense</span>
                     </button>
-                    <button class="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 flex items-center space-x-2">
+                    <a href="../Controllers/logout.php" class="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 flex items-center space-x-2">
+                        
                         <i class="fas fa-sign-out-alt"></i>
                         <span>Logout</span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </header>
@@ -138,13 +139,7 @@ if(!isset($_SESSION["user_id"]))
             </div>
         </div>
 
-        <!-- Logout Button -->
-        <div class="mt-8 text-center">
-            <button class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 flex items-center space-x-2 mx-auto">
-                <i class="fas fa-sign-out-alt"></i>
-                <span>Logout</span>
-            </button>
-        </div>
+    
 
     </div>
 
