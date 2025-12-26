@@ -41,3 +41,4 @@ CREATE TABLE expences(
 
 )
 
+select*from users;

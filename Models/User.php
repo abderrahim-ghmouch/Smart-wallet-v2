@@ -10,7 +10,7 @@ class User {
     private $conn;
     
     
-    public function __construct($username,$email,$password,$passwordConfirm){
+    public function __construct($username = "",$email = "",$password = "",$passwordConfirm = ""){
         $this->username=$username;
         $this->email=$email;
         $this->password=$password;
@@ -53,19 +53,20 @@ class User {
             public function login(string $email, string $password){
                 
                 
-                $statement="select * from Users where email=$email";
-                $query=$this->conn->prepare($statement);
-                $query->execute($this->$email);
+                $statement="select * from users where email = ?;";
+                $query = $this->conn->prepare($statement);
+                $query->execute([$email]);
                 
                 if($query->rowCount() > 0){
                         $userData = $query->fetch(PDO::FETCH_ASSOC);
-                        if($$userData["password"] === $this->password) {
+                        if($userData["password"] === $password) {
                             session_start();
-                            $_SESSION["userData"]== $userData["id"];
+                            $_SESSION["user_id"] = $userData["id"];
                         }
+                    return true;
 
                 } else {
-                        return header("location: /views/login.php");
+                        return false;
                     }
 
                 }

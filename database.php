@@ -2,7 +2,6 @@
 
 return[
 
-
     'host' =>'localhost',
     'dbname' =>'swallet',
     'username' =>'abdo',

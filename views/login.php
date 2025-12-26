@@ -1,16 +1,3 @@
-<?php 
-
-session_start();
-
-if(!isset($_session_["userdata"])){
-
- header("location: /views/login.php");
-
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +11,7 @@ if(!isset($_session_["userdata"])){
 <body class="bg-gray-900 min-h-screen flex items-center justify-center p-4">
 
     <form class="flex flex-col w-full max-w-md bg-gray-800 rounded-lg p-6 shadow-lg" 
-          action="../Models/User.php" method="POST">
+          action="../Controllers/login.php" method="POST">
         
         <div class="text-center mb-6">
             <h1 class="text-2xl font-bold text-white mb-2">Welcome Back</h1>
@@ -59,10 +46,7 @@ if(!isset($_session_["userdata"])){
                         Remember me
                     </label>
                 </div>
-                <a href="#" class="text-sm text-blue-400 hover:text-blue-300">
-                    Forgot password?
-                </a>
-            </div>
+            >
 
         </div>
 
@@ -74,7 +58,7 @@ if(!isset($_session_["userdata"])){
         <div class="text-center">
             <p class="text-gray-400 text-sm">
                 Don't have an account? 
-                <a href="signup.html" class="text-blue-400 hover:text-blue-300 font-medium">Sign Up</a>
+                <a href="signup.php" class="text-blue-400 hover:text-blue-300 font-medium">Sign Up</a>
             </p>
         </div>
 

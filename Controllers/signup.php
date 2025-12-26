@@ -11,8 +11,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $user= new User($username,$email,$password,$passwordconfirm);
 
     if($user->signup()){
-        header("Location: /index.php");
-    }else{
-        header("location: /views/signup.php");
+        header("Location: ../views/login.php");
+    }else
+    {
+        header("location: ../views/signup.php");
+        
     }
 }
