@@ -9,11 +9,13 @@ abstract class Users {
     -int age
 }
 
-class Cards {
-    +String userCard
-    +String bank
-    #int cardNumber
-    +int cvc
+class transfer
+{
+- int amount 
+-string description
+-int category
+-
+
 }
 
 class Incomes {

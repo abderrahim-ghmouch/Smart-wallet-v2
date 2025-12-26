@@ -42,3 +42,18 @@ CREATE TABLE expences(
 )
 
 select*from users;
+
+select*from categories;
+
+
+INSERT INTO categories (namecategory) VALUES
+('salary'),
+('freelance'),
+('investment'),
+('business'),
+('gift'),
+('food'),
+('other');
+
+select*from expences;
+select*from incomes;

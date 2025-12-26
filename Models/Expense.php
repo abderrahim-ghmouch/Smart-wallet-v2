@@ -1,36 +1,13 @@
 <?php
 
-class expense 
+class expense extends transfer
 {
 
-    protected $amount;
-
-    protected $decsription;
-
-    protected $dateExpense;
-
-
-    protected $conn;
-
-
-        public function __construct($amount, $description, $date)
+    public function __construct($amount=0,$description="",$date="",$category=0)
     {
-
-        $this->amount = $amount;
-        $this->decsription = $description;
-        $this->dateExpense = $date;
-        $db = new database();
-        $this->conn = $db->getconnection();
-
+        parent::__construct($amount,$description,$date,$category);
     }
 
-     public function create()
-    {
 
-        $stmt = "insert into incomes(amount,income_description,dateExpenses)value(?,?,?)";
-        $query = $this->conn->prepare($stmt);
-        $query->execute([$this->amount, $this->decsription, $this->dateExpense]);
-
-    }
 
 }
