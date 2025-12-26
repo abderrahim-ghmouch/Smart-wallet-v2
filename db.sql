@@ -22,6 +22,7 @@ CREATE TABLE incomes(
     id int PRIMARY KEY  AUTO INCREMENT,
     amount DECIMAL(10,2) NOT NULL,
     income_description TEXT not null,
+     dateIncomes DATE,
     category_income int,
     FOREIGN KEY(category_income)REFERENCES categories(id)
 
@@ -33,10 +34,10 @@ CREATE TABLE expences(
     id int PRIMARY KEY  AUTO INCREMENT,
     amount DECIMAL(10,2) NOT NULL,
     expenses_description TEXT not null,
+    dateExpenses DATE,
      category_expense int,
     FOREIGN KEY(category_expense)REFERENCES categories(id)
 
 
 )
 
-ALTER TABLE incomes ADD COLUMN dateof incomes DATE;
