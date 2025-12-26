@@ -1,3 +1,16 @@
+<?php 
+
+session_start();
+
+if(!isset($_session_["userdata"])){
+
+ header("location: /views/login.php");
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +24,7 @@
 <body class="bg-gray-900 min-h-screen flex items-center justify-center p-4">
 
     <form class="flex flex-col w-full max-w-md bg-gray-800 rounded-lg p-6 shadow-lg" 
-          action="../classes/auth.php" method="POST">
+          action="../Models/User.php" method="POST">
         
         <div class="text-center mb-6">
             <h1 class="text-2xl font-bold text-white mb-2">Welcome Back</h1>
@@ -24,9 +37,7 @@
                 <label for="email" class="block text-sm font-medium mb-1 text-gray-300">
                     Email Address
                 </label>
-                <input type="email" id="email" name="email" 
-                       class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500 text-white"
-                       placeholder="you@example.com"
+                <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500 text-white"placeholder="you@example.com"
                        required>
             </div>
 
@@ -34,16 +45,16 @@
                 <label for="password" class="block text-sm font-medium mb-1 text-gray-300">
                     Password
                 </label>
-                <input type="password" id="password" name="password" 
-                       class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500 text-white"
+                <input type="password" id="password" name="password" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:border-blue-500 text-white"
                        placeholder="••••••••"
                        required>
             </div>
 
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <input type="checkbox" id="remember" name="remember"
-                           class="w-4 h-4 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 text-blue-600">
+                    <input type="checkbox" id="remember" name="remember" class="w-4 h-4 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 text-blue-600">
+
+
                     <label for="remember" class="ml-2 text-sm text-gray-300">
                         Remember me
                     </label>

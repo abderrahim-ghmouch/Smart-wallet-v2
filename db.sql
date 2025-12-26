@@ -39,4 +39,4 @@ CREATE TABLE expences(
 
 )
 
-select *from users ;
+ALTER TABLE incomes ADD COLUMN dateof incomes DATE;

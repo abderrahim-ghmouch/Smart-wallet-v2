@@ -18,7 +18,5 @@ class Database{
     public function getConnection(){
         return $this->pdo;
     }
-}    
-
-$obj = new Database();
+}
 

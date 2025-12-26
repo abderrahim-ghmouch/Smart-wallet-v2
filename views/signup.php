@@ -13,7 +13,7 @@
 <body class="bg-gray-900 min-h-screen flex items-center justify-center p-4">
 
     <form class="flex flex-col w-full max-w-md bg-gray-800 rounded-lg p-6 shadow-lg" 
-          action="../middleware/signup-middle.php" method="POST">
+        action="../Controllers/signup.php" method="POST">
         
         <h1 class="text-2xl font-bold text-white mb-6 text-center">Create Account</h1>
 
@@ -68,7 +68,7 @@
 
         <p class="text-gray-400 text-sm text-center">
             Already have an account? 
-            <a href="#" class="text-blue-400 hover:text-blue-300">Sign In</a>
+            <a href="/views/login.php" class="text-blue-400 hover:text-blue-300">Sign In</a>
         </p>
 
     </form>
