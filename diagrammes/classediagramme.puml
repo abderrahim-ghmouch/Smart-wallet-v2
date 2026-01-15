@@ -5,14 +5,17 @@ skinparam classAttributeIconSize 0
 
 abstract class Users {
     +String name
+    
     -int age
 }
 
-class Cards {
-    +String userCard
-    +String bank
-    #int cardNumber
-    +int cvc
+class transfer
+{
+- int amount 
+-string description
+-int category
+-
+
 }
 
 class Incomes {
@@ -30,7 +33,7 @@ class Database {
     -String dbName
     -String username
     -String password
-    +connect()
+    +getconnection()
 }
 
 Users -- Cards
